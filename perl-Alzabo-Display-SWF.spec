@@ -1,10 +1,10 @@
 #
 # Conditional build:
-%bcond_without	tests		# perform "make test"
+%bcond_without	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Alzabo
-%define	pnam	Display-SWF
+%define		pdir	Alzabo
+%define		pnam	Display-SWF
 Summary:	Create SWF (Flash) Movies for visualizing Alzabo database schemas
 Summary(pl):	Tworzenie filmów SWF (Flash) do wizualizacji schematów baz danych Alzabo
 Name:		perl-Alzabo-Display-SWF
