@@ -1,7 +1,6 @@
 #
 # Conditional build:
-%bcond_with	tests		# perform "make test"
-				# needs mysql access
+%bcond_without	tests		# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Alzabo
@@ -10,12 +9,13 @@ Summary:	Create SWF (Flash) Movies for visualizing Alzabo database schemas
 Summary(pl):	Tworzenie filmów SWF (Flash) do wizualizacji schematów baz danych Alzabo
 Name:		perl-Alzabo-Display-SWF
 Version:	0.01
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	380e05fd0287865310e742756d2a2688
+Patch0:		%{name}-regexps.patch
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
@@ -43,6 +43,7 @@ film SWF zawieraj±cy wizualizacjê modelu danych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch0 -p0
 
 %build
 %{__perl} Build.PL \
