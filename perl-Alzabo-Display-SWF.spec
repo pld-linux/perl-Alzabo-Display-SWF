@@ -9,7 +9,7 @@ Summary:	Create SWF (Flash) Movies for visualizing Alzabo database schemas
 Summary(pl):	Tworzenie filmów SWF (Flash) do wizualizacji schematów baz danych Alzabo
 Name:		perl-Alzabo-Display-SWF
 Version:	0.01
-Release:	3
+Release:	4
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -66,5 +66,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README Changes etc/[cm]*
-%{perl_vendorlib}/Alzabo/*/*
+%dir %{perl_vendorlib}/Alzabo/Display
+%{perl_vendorlib}/Alzabo/Display/*
 %{_mandir}/man3/*
