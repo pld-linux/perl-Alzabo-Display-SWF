@@ -1,0 +1,3 @@
+- release 3: added -regexps.patch (tests don't require MySQL,
+  they just did what they were supposed to do: show, that the
+  code is buggy :-] )
