@@ -1,0 +1,20 @@
+--- lib/Alzabo/Display/SWF/Schema.pm	2003-10-01 11:24:30.000000000 +0200
++++ lib/Alzabo/Display/SWF/Schema.pm	2004-06-04 14:36:42.148578560 +0200
+@@ -108,7 +108,7 @@
+ 
+   # DIMENSION OF THE GRAPH/MOVIE
+   my ($x, $y) =
+-  ( $self->{X}, $self->{Y} ) = /graph \[.*bb="0,0,(\d+),(\d+)".*\];/;
++  ( $self->{X}, $self->{Y} ) = /graph \[.*?\bbb="0,0,(\d+),(\d+)".*\];/s;
+   my $m = $self->{mov};
+   $m->setDimension( $x+10, $y+10 );
+ 
+@@ -251,7 +251,7 @@
+   );
+   my $bi = $m->add($b);
+ 
+-  my @lp = /graph \[.*lp="(\d+),(\d+)".*\];/ or die;
++  my @lp = /graph \[.*?\blp="(\d+),(\d+)".*\];/s or die;
+   $bi->moveTo($lp[0], $y - $lp[1]);
+   my $ti = $m->add($t);
+   $ti->moveTo($lp[0] + 1, $y - $lp[1] + 11);
