@@ -6,7 +6,7 @@
 %define	pdir	Alzabo
 %define	pnam	Display-SWF
 Summary:	Create SWF (Flash) Movies for visualizing Alzabo database schemas
-#Summary(pl):	
+Summary(pl):	Tworzenie filmów SWF (Flash) do wizualizacji schematów baz danych Alzabo
 Name:		perl-Alzabo-Display-SWF
 Version:	0.01
 Release:	1
@@ -31,8 +31,10 @@ This Module uses the information provided by an Alzabo database schema
 and - with the help of the GraphViz module and the Ming library -
 creates a SWF Movie which contains a visualization of the data model.
 
-# %description -l pl
-# TODO
+%description -l pl
+Ten modu³ u¿ywa informacji dostarczonych przez schemat bazy danych
+Alzabo i - przy pomocy modu³u GraphViz oraz biblioteki Ming - tworzy
+film SWF zawieraj±cy wizualizacjê modelu danych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -56,5 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README Changes etc/[cm]*
-%{perl_vendorlib}/%{pdir}/*/*
+%{perl_vendorlib}/Alzabo/*/*
 %{_mandir}/man3/*
