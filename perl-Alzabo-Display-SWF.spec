@@ -17,6 +17,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	380e05fd0287865310e742756d2a2688
 Patch0:		%{name}-regexps.patch
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-Module-Build
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Alzabo >= 0.72
