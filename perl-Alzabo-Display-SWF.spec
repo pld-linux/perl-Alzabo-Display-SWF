@@ -20,6 +20,7 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Alzabo >= 0.72
+BuildRequires:	perl-DBD-mysql
 BuildRequires:	perl-GraphViz >= 1.6
 BuildRequires:	perl-ming
 BuildRequires:	perl-YAML
