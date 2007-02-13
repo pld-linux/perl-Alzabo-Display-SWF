@@ -6,7 +6,7 @@
 %define		pdir	Alzabo
 %define		pnam	Display-SWF
 Summary:	Create SWF (Flash) Movies for visualizing Alzabo database schemas
-Summary(pl.UTF-8):   Tworzenie filmów SWF (Flash) do wizualizacji schematów baz danych Alzabo
+Summary(pl.UTF-8):	Tworzenie filmów SWF (Flash) do wizualizacji schematów baz danych Alzabo
 Name:		perl-Alzabo-Display-SWF
 Version:	0.01
 Release:	4
